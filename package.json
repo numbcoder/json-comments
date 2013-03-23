@@ -1,6 +1,6 @@
 {
   "name": "json-comments",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "require extension for JSON files which can write comments inside",
   "main": "index.js",
   "tags": [
@@ -12,7 +12,10 @@
   "scripts": {
     "test": "node test/test.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/numbcoder/json-comments.git"
+  },
   "author": "Johnny Wang <wzhao23@gmail.com>",
   "license": "MIT"
 }
