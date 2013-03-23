@@ -1,0 +1,14 @@
+{
+  // this is a comment
+  "a": "far", // a is a string
+  "b": 32, /* b is a number */
+  
+  /* c is a object */
+  "c": {
+    "key": "ccdd"
+  },
+  /*
+  list is a array
+  */
+  "list": ["first", 2]
+}
