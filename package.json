@@ -1,7 +1,7 @@
 {
   "name": "json-comments",
   "version": "0.1.0",
-  "description": "require extension for JSON files which can write comments inside",
+  "description": "Make your json config support comments.",
   "main": "index.js",
   "tags": [
     "require",

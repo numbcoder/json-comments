@@ -1,6 +1,6 @@
 # json-comments
 
-Comments support for json with require.
+Make your json config support comments.
 
 ## Installation
 
