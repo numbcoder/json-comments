@@ -1,12 +1,13 @@
 {
   "name": "json-comments",
-  "version": "0.1.0",
-  "description": "Make your json config support comments.",
+  "version": "0.1.1",
+  "description": "Make your json config file support comments.",
   "main": "index.js",
   "tags": [
-    "require",
     "json",
     "comments",
+    "require",
+    "config",
     "comment"
   ],
   "scripts": {
