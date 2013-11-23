@@ -23,7 +23,7 @@ require('json-comments');
 
   "port" : 3000, //port
 
-  "url" : "https://github.com/numbcoder", // url
+  "url" : "https://github.com/numbcoder", /* url */
 
   /*
   * comments support for json
@@ -41,7 +41,7 @@ console.log(config);
 // ...
 ```
 
-Parse JSON string
+####Parse JSON string
 ```js
 var JSONC = require('json-comments');
 var fs = require('fs');
@@ -53,7 +53,7 @@ var config = JSONC.parse(content);
 console.log(config);
 ```
 
-Clean the JSON String
+####Clean the JSON String
 ```js
 var JSONC = require('json-comments');
 var fs = require('fs');
