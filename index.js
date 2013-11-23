@@ -1,4 +1,5 @@
 var fs = require('fs');
+var cleaner = require('./lib/clean'); 
 
 function stripBOM(content) {
   // Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
@@ -10,24 +11,21 @@ function stripBOM(content) {
   return content;
 }
 
-//remove comments
-function removeComments(str) {
-  str = str || "";
- 
-  str = str.replace(/\/\*(?:(?!\*\/)[\s\S])*\*\//g, "");
-  // Everything after '//'
-  str = str.replace(/\/\/[^\n\r]*/g, ""); 
- 
-  return str;
-}
-
 // Override extension for .json
 require.extensions['.json'] = function(module, filename) {
   var content = fs.readFileSync(filename, 'utf8');
   try {
-    module.exports = JSON.parse(removeComments(stripBOM(content)));
+    module.exports = JSON.parse(cleaner.clean(stripBOM(content)));
   } catch (err) {
     err.message = filename + ': ' + err.message;
     throw err;
   }
 };
+
+// expose clean method
+exports.clean = cleaner.clean;
+
+// parse a JSON string which contain comments
+exports.parse = function(jsonStr) {
+  return JSON.parse(cleaner.clean(jsonStr));
+}
