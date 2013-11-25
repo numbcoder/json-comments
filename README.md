@@ -1,4 +1,4 @@
-# Json Comments ![NPM version](https://badge.fury.io/js/json-comments.png)
+# JSON Comments ![NPM version](https://badge.fury.io/js/json-comments.png)
 
 Make your json config support comments.
 
