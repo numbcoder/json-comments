@@ -4,7 +4,9 @@ Make your json config support comments.
 
 ## Installation
 
-    $ npm install json-comments
+```bash
+$ npm install json-comments
+```
 
 ### Syntax:
 
@@ -41,7 +43,7 @@ console.log(config);
 // ...
 ```
 
-####Parse JSON string
+#### Parse JSON string
 ```js
 var JSONC = require('json-comments');
 var fs = require('fs');
@@ -53,7 +55,7 @@ var config = JSONC.parse(content);
 console.log(config);
 ```
 
-####Clean the JSON String
+#### Minify the JSON string
 ```js
 var JSONC = require('json-comments');
 var fs = require('fs');
@@ -61,8 +63,9 @@ var fs = require('fs');
 var content = fs.readFileSync('./config.json', 'utf8');
 
 // remove comments and spaces from JSON String
-var JsonStr = JSONC.clean(content);
+var JsonStr = JSONC.minify(content);
 ```
 
 ## License
 MIT
+

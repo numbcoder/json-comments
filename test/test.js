@@ -28,6 +28,12 @@ var package = JSONC.parse(pkgStr);
 
 assert.equal(package.name, 'json-comments', 'yes');
 
+var pkgStr2 = JSONC.minify(pkgStr);
+//console.log(pkgStr2);
+var package2 = JSON.parse(pkgStr2);
+
+assert.equal(package.name, package2.name, 'yes');
+
 console.log(package);
 
 

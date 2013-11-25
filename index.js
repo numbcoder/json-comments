@@ -1,5 +1,5 @@
 var fs = require('fs');
-var cleaner = require('./lib/clean'); 
+var JSONC = require('./lib/jsonc'); 
 
 function stripBOM(content) {
   // Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
@@ -15,7 +15,7 @@ function stripBOM(content) {
 require.extensions['.json'] = function(module, filename) {
   var content = fs.readFileSync(filename, 'utf8');
   try {
-    module.exports = JSON.parse(cleaner.clean(stripBOM(content)));
+    module.exports = JSON.parse(JSONC.minify(stripBOM(content)));
   } catch (err) {
     err.message = filename + ': ' + err.message;
     throw err;
@@ -23,9 +23,9 @@ require.extensions['.json'] = function(module, filename) {
 };
 
 // expose clean method
-exports.clean = cleaner.clean;
+exports.minify = JSONC.minify;
 
 // parse a JSON string which contain comments
 exports.parse = function(jsonStr) {
-  return JSON.parse(cleaner.clean(jsonStr));
+  return JSON.parse(JSONC.minify(jsonStr));
 }
