@@ -69,3 +69,7 @@ var JsonStr = JSONC.minify(content);
 ## License
 MIT
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/numbcoder/json-comments/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
