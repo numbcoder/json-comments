@@ -1,6 +1,8 @@
 {
   // this is a comment
   "a": "far", // a is a string
+  "cn": "中文", //中文注释
+  "嘿": "hello",
   "b": 32, /* b is a number */
 
   /* c is a object */

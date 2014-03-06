@@ -6,6 +6,8 @@ var result = require('./comments');
 
 var obj = {
   a: "far",
+  cn: "中文",
+  "嘿": "hello",
   b: 32,
   c: {
     url: "http://github.com",
